@@ -274,7 +274,7 @@ function formatNum(s) {
 	if (extractNumbers == undefined) {
 		var extractNumbers = adapter.config.extractNumbers;
 		if (extractNumbers && patternNumber == undefined) {
-			var patternNumber = /^(-|\+)?\d+(,|\.)?\d* *(C|F|%|mm|km\/h)$/;
+			var patternNumber = /^(-|\+)?\d+(,|\.)?\d* *(C|F|%|mm|km\/h|ppm)$/;
 		}
 	}
 
@@ -288,7 +288,7 @@ function formatNum(s) {
 function normalize(s) {
 	s = s.toLowerCase();
 	s = s.replace(" ", "_");
-	s = s.replace("ä", "ue");
+	s = s.replace("ä", "ae");
 	s = s.replace("ö", "oe");
 	s = s.replace("ü", "üe");
 	s = s.replace("ß", "ss");
