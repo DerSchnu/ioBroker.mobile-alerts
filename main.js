@@ -274,12 +274,12 @@ function formatNum(s) {
 	if (extractNumbers == undefined) {
 		var extractNumbers = adapter.config.extractNumbers;
 		if (extractNumbers && patternNumber == undefined) {
-			var patternNumber = /^(-|\+)?\d+(,|\.)?\d* *(C|F|%|mm|km\/h|ppm)$/;
+			var patternNumber = /^(-|\+)?\d+(,|\.)?\d* *(C|F|%|mm|km\/h|ppm|m\/s)$/;
 		}
 	}
 
 	if (extractNumbers && patternNumber.test(s)) {
-		s = s.replace(",", ".");
+		's = s.replace(",", ".");
 		s = parseFloat(s).toString();
 	}
 	return s;
